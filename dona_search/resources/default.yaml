@@ -1,0 +1,28 @@
+schema_version: 4
+providers:
+  - type: search_google
+    name: google
+    enabled: true
+    top_k: 20
+  - type: search_bing
+    name: bing
+    enabled: true
+    top_k: 20
+  - type: search_yandex
+    name: yandex
+    enabled: true
+    top_k: 20
+query_model:
+  model: google/gemma-4-E4B-it
+  revision: ee0ef6023621cff504d758262d4e04895a5af4a2
+  max_prompt_tokens: 2048
+ranking:
+  model: google/gemma-4-E4B-it
+  revision: ee0ef6023621cff504d758262d4e04895a5af4a2
+  max_prompt_tokens: 8192
+browser:
+  kind: ungoogled-chromium
+  headless: true
+max_queries: 3
+display_limit: 10
+timeout: 20

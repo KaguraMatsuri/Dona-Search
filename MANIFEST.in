@@ -1,0 +1,11 @@
+recursive-include dona_search/resources *.yaml
+recursive-include scripts *.py *.sh
+recursive-include tests *.py *.yaml
+include configs/default.yaml examples/demo.py
+include QUICKSTART.md QUICKREF.md ARCHITECTURE.md TRAINING.md DEVELOPMENT.md CONTRIBUTING.md
+exclude .clinerules .cursorrules CLAUDE.md PROMPTS.md STRICT_RULES.md AGENTS.md AGENTS.override.md gpt.md
+prune models
+prune checkpoints
+prune data
+prune logs
+global-exclude __pycache__ *.pyc .env .env.* AGENTS.md AGENTS.override.md CLAUDE.md .clinerules .cursorrules
